@@ -1,10 +1,35 @@
-.header {
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+.flex {
   display: flex;
+}
+
+.navbar {
   flex-direction: column;
   align-items: center;
 }
-.header .logo__header {
+.navbar .navbar__logo {
   width: 162px;
   padding: 0px 19px 0px 16px;
   margin: 14px 89px 13px 89px;
+}
+
+.navbar__search {
+  justify-content: center;
+  align-items: center;
+  background: #EAEAEA;
+  box-shadow: inset 0px 2px 3px #cccbcb;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+}
+.navbar__search .navbar__search--input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0px 0px 0px 17px;
+  width: 109px;
 }/*# sourceMappingURL=styles.css.map */
