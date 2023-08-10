@@ -1,3 +1,6 @@
+@import "partials/index.scss";
+@import "partials/restaurants.scss";
+
 * {
     font-family: "Raleway", sans-serif;
     margin: 0;
@@ -8,7 +11,17 @@
     $secondary-color: #ff79da;
     $third-color: #99e2d0;
     $text-color-and-footer: #353535;
-    
+
+    h2 {
+        font-size: 24px;
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+      color: #000000;
+      text-decoration: none;
+    }
 .flex {
     display: flex;
 }
@@ -17,6 +30,7 @@
     font-size: 17px;
 }
 .btn {
+    cursor: pointer;
     border-radius: 25px;
     background: linear-gradient(175deg, $secondary-color 0%, $primary-color 100%);
     border: none;
@@ -52,14 +66,12 @@
         font-size: 13px;
     }
 }
-.fa-handshake-angle {
-transform: scale(0.73, 1);
-padding-right: 6px;
-&.fa-utensils {
-    padding-right: 11px;    
-    }
+.fa-utensils {
+    padding-right: 11px;
 }
-
+.fa-handshake-angle {
+        padding-right: 6px;
+    }
 .fa-heart {
     font-size: 22px;
     position: relative;
