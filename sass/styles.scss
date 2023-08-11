@@ -1,3 +1,4 @@
+@import "partials/variables.scss";
 @import "partials/index.scss";
 @import "partials/restaurants.scss";
 
@@ -5,12 +6,6 @@
     font-family: "Raleway", sans-serif;
     margin: 0;
 }
-        
-//Variables//
-    $primary-color: #9356dc;
-    $secondary-color: #ff79da;
-    $third-color: #99e2d0;
-    $text-color-and-footer: #353535;
 
     h2 {
         font-size: 24px;
@@ -29,22 +24,7 @@
 .restaurants__cards--location {
     font-size: 17px;
 }
-.btn {
-    cursor: pointer;
-    border-radius: 25px;
-    background: linear-gradient(175deg, $secondary-color 0%, $primary-color 100%);
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    &:hover {
-        background: linear-gradient(356deg,
-        lighten($primary-color, 5%) 0%,
-        lighten($secondary-color, 5%) 100%);
-        box-shadow: 0px 2px 10px 0px #525252;
-    } 
-}
+
 .footer {
     padding: 22px 0px 22px 25px;
     flex-direction: column;
@@ -77,3 +57,45 @@
     position: relative;
     bottom: 55px; left: 290px;
 }
+
+//Animations//
+
+//Animation 1 BTN au survol//
+
+.btn {
+    cursor: pointer;
+    border-radius: 25px;
+    background: linear-gradient(175deg, $secondary-color 0%, $primary-color 100%);
+    border: none;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    &:hover {
+        &::after {
+            opacity: 1;
+            border-radius: 25px;
+    }
+}
+    &::after {
+        content: "";
+        border-radius: 25px;
+        position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        background: linear-gradient(356deg,
+        lighten($primary-color, 4%) 0%,
+        lighten($secondary-color, 4%) 100%);
+        box-shadow: 0px 4px 10px 0px rgba(1, 1, 1, 0.25);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    } 
+}
+
+
+        
