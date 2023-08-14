@@ -11,7 +11,7 @@
 .navbar__search {
   justify-content: center;
   align-items: center;
-  background: #EAEAEA;
+  background: #eaeaea;
   box-shadow: inset 0px 2px 3px #cccbcb;
   width: 100%;
   padding: 20px 0px 20px 0px;
@@ -32,7 +32,7 @@
   text-align: center;
   align-items: center;
   padding: 39px 0px 57px 0px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .cta .cta__title {
   width: 275px;
@@ -67,7 +67,7 @@
   padding: 28.59px 0px 28.12px 0px;
   margin: 12.5px;
   border-radius: 20px;
-  background: var(--background, #F6F6F6);
+  background: var(--background, #f6f6f6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .intro__cards .introcards__txt {
@@ -76,7 +76,7 @@
 
 .introcards__ico {
   padding-right: 23px;
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 .introcards__ico--purple {
   color: #9356dc;
@@ -99,7 +99,7 @@
 
 .restaurants {
   flex-direction: column;
-  background: var(--background, #F6F6F6);
+  background: var(--background, #f6f6f6);
   padding: 54px 0px 66px 0px;
 }
 .restaurants .restaurants__title {
@@ -136,7 +136,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #008766;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 7px 9.63px 6px 9px;
   border-radius: 2px;
 }
@@ -259,4 +259,4 @@ a:active {
   100% {
     transform: scaleX(1);
   }
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */

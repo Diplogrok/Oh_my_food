@@ -2,124 +2,119 @@
 @import "partials/index.scss";
 @import "partials/restaurants.scss";
 
-
 * {
-    font-family: "Raleway", sans-serif;
-    margin: 0;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
 }
 
-    h2 {
-        font-size: 24px;
-    }
+h2 {
+  font-size: 24px;
+}
 
-    a:link,
-    a:visited,
-    a:active {
-      color: #000000;
-      text-decoration: none;
-    }
+a:link,
+a:visited,
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .restaurants__cards--location {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .footer {
-    padding: 22px 0px 22px 25px;
-    flex-direction: column;
-    background: $text-color-and-footer;
-    color: white;
-    font-weight: 500; 
-    .footer__logo {
-        height: 27px;
-        width: 137px;
-        padding-bottom: 9px;
-        & path {
-        fill: white;
-        }
-    }   
+  padding: 22px 0px 22px 25px;
+  flex-direction: column;
+  background: $text-color-and-footer;
+  color: white;
+  font-weight: 500;
+  .footer__logo {
+    height: 27px;
+    width: 137px;
+    padding-bottom: 9px;
+    & path {
+      fill: white;
+    }
+  }
 }
 .footer__link {
-    padding-top: 7px;
-    .footer__icon {
-        font-size: 13px;
-    }
+  padding-top: 7px;
+  .footer__icon {
+    font-size: 13px;
+  }
 }
 .fa-utensils {
-    padding-right: 11px;
+  padding-right: 11px;
 }
 .fa-handshake-angle {
-        padding-right: 6px;
-    }
+  padding-right: 6px;
+}
 
 //Animations//
 
 //Animation 1 BTN au survol//
 
 .btn {
-    cursor: pointer;
-    border-radius: 25px;
-    background: linear-gradient(175deg, $secondary-color 0%, $primary-color 100%);
-    border: none;
-    position: relative;
-    z-index: 1;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    &:hover {
-        &::after {
-            opacity: 1;
-            border-radius: 25px;
-    }
-}
+  cursor: pointer;
+  border-radius: 25px;
+  background: linear-gradient(175deg, $secondary-color 0%, $primary-color 100%);
+  border: none;
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  &:hover {
     &::after {
-        content: "";
-        border-radius: 25px;
-        position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-        background: linear-gradient(356deg,
-        lighten($primary-color, 4%) 0%,
-        lighten($secondary-color, 4%) 100%);
-        box-shadow: 0px 4px 10px 0px rgba(1, 1, 1, 0.25);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    } 
+      opacity: 1;
+      border-radius: 25px;
+    }
+  }
+  &::after {
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      356deg,
+      lighten($primary-color, 4%) 0%,
+      lighten($secondary-color, 4%) 100%
+    );
+    box-shadow: 0px 4px 10px 0px rgba(1, 1, 1, 0.25);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+  }
 }
 
 //Animation 2 "j'aime" au clic//
 
 .like {
-    position: relative;
-    cursor: pointer;
-    fill: none;
-    stroke: #000000;       
-    .like__anim {
-        &:active {
-            fill: url(#mygradient);
-            stroke: none;
-            animation: progress-like 1s;
-        }
+  position: relative;
+  cursor: pointer;
+  fill: none;
+  stroke: #000000;
+  .like__anim {
+    &:active {
+      fill: url(#mygradient);
+      stroke: none;
+      animation: progress-like 1s;
     }
+  }
 }
 
 @keyframes progress-like {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
-
-
-
-
-
-        
