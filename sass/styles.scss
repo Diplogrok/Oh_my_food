@@ -53,9 +53,9 @@ a:active {
   padding-right: 6px;
 }
 
-//Animations//
+/* Animations */
 
-//Animation 1 BTN au survol//
+/* Animation 1 BTN au survol */
 
 .btn {
   cursor: pointer;
@@ -94,7 +94,7 @@ a:active {
   }
 }
 
-//Animation 2 "j'aime" au clic//
+/* Animation 2 "j'aime" au clic */
 
 .like {
   position: relative;
@@ -117,4 +117,12 @@ a:active {
   100% {
     transform: scaleX(1);
   }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
 }
