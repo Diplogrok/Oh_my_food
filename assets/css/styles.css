@@ -149,6 +149,11 @@
   padding: 0px 0px 12px 13px;
 }
 
+.like__index {
+  bottom: 55px;
+  left: 290px;
+}
+
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
@@ -204,13 +209,6 @@ a:active {
   padding-right: 6px;
 }
 
-.fa-heart {
-  font-size: 22px;
-  position: relative;
-  bottom: 55px;
-  left: 290px;
-}
-
 .btn {
   cursor: pointer;
   border-radius: 25px;
@@ -240,4 +238,25 @@ a:active {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+}
+
+.like {
+  position: relative;
+  cursor: pointer;
+  fill: none;
+  stroke: #000000;
+}
+.like .like__anim:active {
+  fill: url(#mygradient);
+  stroke: none;
+  animation: progress-like 1s;
+}
+
+@keyframes progress-like {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }/*# sourceMappingURL=styles.css.map */

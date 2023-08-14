@@ -2,6 +2,7 @@
 @import "partials/index.scss";
 @import "partials/restaurants.scss";
 
+
 * {
     font-family: "Raleway", sans-serif;
     margin: 0;
@@ -52,11 +53,6 @@
 .fa-handshake-angle {
         padding-right: 6px;
     }
-.fa-heart {
-    font-size: 22px;
-    position: relative;
-    bottom: 55px; left: 290px;
-}
 
 //Animations//
 
@@ -96,6 +92,34 @@
         transition: opacity 250ms;
     } 
 }
+
+//Animation 2 "j'aime" au clic//
+
+.like {
+    position: relative;
+    cursor: pointer;
+    fill: none;
+    stroke: #000000;       
+    .like__anim {
+        &:active {
+            fill: url(#mygradient);
+            stroke: none;
+            animation: progress-like 1s;
+        }
+    }
+}
+
+@keyframes progress-like {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+
 
 
         
