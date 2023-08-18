@@ -102,20 +102,21 @@ a:active {
   fill: none;
   stroke: #000000;
   .like__anim {
-    &:active {
+    &:hover path {
       fill: url(#mygradient);
       stroke: none;
       animation: progress-like 1s;
+      transform-origin: bottom;
     }
   }
 }
 
 @keyframes progress-like {
   0% {
-    transform: scaleX(0);
+    transform: scale(0);
   }
   100% {
-    transform: scaleX(1);
+    transform: scale(1);
   }
 }
 
