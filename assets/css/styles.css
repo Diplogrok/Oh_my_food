@@ -54,13 +54,15 @@
 
 .intro {
   padding: 48px 0px 68px 0px;
-  flex-direction: column;
 }
 .intro .intro__title {
   padding: 0px 0px 26px 20px;
 }
 
 .intro__cards {
+  flex-direction: column;
+}
+.intro__cards .intro__cards--content {
   justify-content: center;
   align-self: center;
   align-items: center;
@@ -71,19 +73,19 @@
   background: var(--background, #f6f6f6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.intro__cards .introcards__txt {
+.intro__cards .intro__cards--content .intro__cards--txt {
   font-weight: 500;
 }
 
-.introcards__ico {
+.intro__ico {
   padding-right: 23px;
   color: #7e7e7e;
 }
-.introcards__ico--purple {
+.intro__ico--purple {
   color: #9356dc;
 }
 
-.introcards__number {
+.intro__cards--number {
   justify-content: center;
   align-self: center;
   color: white;
@@ -115,7 +117,7 @@
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
-  width: 340px;
+  min-width: 340px;
   height: 261px;
 }
 .cards .restaurants__cards img {
@@ -157,25 +159,67 @@
 
 @media only screen and (min-width: 600px) {
   /* For tablets: */
+  h1 {
+    font-size: 30px;
+  }
   .cta {
     padding: 30px 0px 30px 0px;
   }
-  .cta .media {
+  .cta .cta__title {
     min-width: max-content;
   }
-  .intro {
-    padding: 50px 0px 50px 0px;
-    flex-direction: row;
+  .restaurants__cards {
+    width: 400px;
   }
-  .intro__cards {
-    margin: 50px 0px 0px 0px;
-  }
-  h1 {
-    font-size: 40px;
+  .like__index {
+    left: 340px;
   }
 }
 @media only screen and (min-width: 768px) {
   /* For desktop: */
+  h1 {
+    font-size: 40px;
+  }
+  .cta__subtitle {
+    min-width: max-content;
+  }
+  .intro {
+    padding: 50px 0px 50px 0px;
+  }
+  .intro .intro__title {
+    padding: 0px 0px 25px 180px;
+  }
+  .intro__cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .intro__cards .intro__cards--content {
+    justify-content: flex-start;
+    max-width: 322px;
+  }
+  .intro__ico {
+    padding-left: 35px;
+  }
+  .intro__cards--number {
+    top: 0px;
+    right: 0px;
+    left: 25px;
+  }
+  .restaurants {
+    padding: 30px 0px 30px 0px;
+  }
+  .restaurants .restaurants__title {
+    padding: 0px 0px 28px 180px;
+  }
+  .cards {
+    padding-top: 0px;
+  }
+  .cards .restaurants__cards {
+    width: 340px;
+  }
+  .like__index {
+    left: 290px;
+  }
 }
 * {
   font-family: "Raleway", sans-serif;
