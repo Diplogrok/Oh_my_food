@@ -44,6 +44,7 @@ a:active {
   padding-top: 7px;
   .footer__icon {
     font-size: 13px;
+    padding-top: 3px;
   }
 }
 .fa-utensils {
@@ -126,4 +127,19 @@ a:active {
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
+  .footer {
+    padding: 22px 50px 22px 25px;
+    flex-direction: row;
+    justify-content: flex-end;
+    .footer__logo {
+      padding-left: 16px;
+      order: 2;
+    }
+  }
+  .footer__link {
+    padding-right: 11px;
+  }
+  .media {
+    padding-right: 60px;
+  }
 }
