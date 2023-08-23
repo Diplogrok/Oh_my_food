@@ -102,7 +102,7 @@
   padding-bottom: 27px;
 }
 
-.cta__btn {
+.cta__btn--index {
   padding: 13px 18.75px;
 }
 
@@ -282,6 +282,37 @@
     padding-bottom: 30px;
   }
 }
+.navbar__restaurants {
+  flex-direction: row;
+}
+.navbar__restaurants .navbar__icon {
+  font-size: 30px;
+  align-self: center;
+  padding-left: 17px;
+}
+
+.navbar__img {
+  object-fit: cover;
+  height: 275px;
+  width: 100%;
+  object-position: 0% 0%;
+}
+
+.intro__restaurants {
+  padding-left: 17px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #f6f6f6;
+}
+.intro__restaurants .intro__restaurants--title {
+  font-family: Shrikhand;
+  font-size: 28px;
+}
+
+.cta__btn--restaurants {
+  padding: 16px 48px 15px 49px;
+}
+
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
