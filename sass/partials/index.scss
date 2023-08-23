@@ -1,3 +1,40 @@
+/* loader */
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+  .loader__title {
+    color: white;
+    font-size: 60px;
+    font-family: shrikhand;
+    animation: loading $anim-dur infinite;
+    @for $i from 1 through $num-letters {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+    }
+  }
+}
+@keyframes loading {
+  0% {
+    color: #9356dc;
+  }
+  50% {
+    color: #ff79da;
+  }
+  100% {
+    color: #9356dc;
+  }
+}
+
+/* */
+
 .navbar {
   flex-direction: column;
   align-items: center;
