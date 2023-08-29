@@ -3,17 +3,20 @@
 .loader {
   position: fixed;
   width: 100%;
+  max-width: 1440px;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
-  z-index: 100;
+  z-index: -1;
+  animation: loader $anim-dur;
+  opacity: 0;
   .loader__title {
     color: white;
     font-size: 60px;
     font-family: shrikhand;
-    animation: loading $anim-dur infinite;
+    animation: loader-title $anim-dur-2 infinite;
     @for $i from 1 through $num-letters {
       &--#{$i} {
         animation-delay: $anim-delay * $i;
@@ -21,7 +24,21 @@
     }
   }
 }
-@keyframes loading {
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 100;
+  }
+  90% {
+    opacity: 1;
+    z-index: 100;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader-title {
   0% {
     color: #9356dc;
   }
@@ -180,6 +197,7 @@
 }
 
 .like__index {
+  position: relative;
   bottom: 55px;
   left: 290px;
 }
@@ -202,6 +220,7 @@
   }
 
   .like__index {
+    position: relative;
     left: 440px;
   }
 }
@@ -217,7 +236,7 @@
   .intro {
     padding: 50px 0px 50px 0px;
     .intro__title {
-      padding: 0px 0px 25px 180px;
+      padding: 0px 0px 25px 150px;
     }
   }
   .intro__cards {
@@ -241,12 +260,11 @@
     .restaurants__content {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
-      padding-left: 100px;
+      justify-content: space-evenly;
     }
   }
   .restaurants__title {
-    padding: 0px 0px 28px 180px;
+    padding: 0px 0px 28px 150px;
   }
   .cards {
     padding-top: 0px;

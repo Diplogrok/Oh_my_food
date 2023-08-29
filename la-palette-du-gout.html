@@ -10,87 +10,133 @@
     <link rel="preconnect" href="https://kit.fontawesome.com/32265729dc.css" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 </head>
 
-<body>
+<body class="page__restaurant">
 
     <header>
         <nav class="navbar flex">
-            <div class="navbar__restaurants flex">
+            <div class="navbar__restaurant flex">
                 <i class="navbar__icon fa-solid fa-arrow-left"></i>
                 <img class="navbar__logo" src="assets/images/logo/ohmyfood.png" alt="logo">
             </div>
             <img class="navbar__img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
         </nav>
     </header>
-    <main>
-        <section class="intro__restaurants">
-            <h1 class="intro__restaurants--title">La palette du goût</h1>
-            <span class="like like__restaurants">
-                <svg class="like__anim" width="24px" height="24px" viewBox="0 0 48 48" id="heart"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="m43,17.0766c0-5.6539-4.5835-10.2373-10.2374-10.2373-3.7223,0-6.9708,1.9932-8.7626,4.964-1.7919-2.9708-5.0403-4.964-8.7626-4.964-5.6539,0-10.2373,4.5834-10.2373,10.2373,0,1.2925.2496,2.524.6866,3.6627,3.3851,9.7368,18.3134,20.4215,18.3134,20.4215,0,0,14.9282-10.6847,18.3134-20.4215.437-1.1386.6867-2.3702.6867-3.6627Z"
-                        style="stroke-linecap:round;stroke-linejoin:round" />
-                    <defs>
-                        <linearGradient id="mygradient" x1="11.5" y1="-5.45973" x2="3.93419" y2="27.9927"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0" stop-color="#9356DC" />
-                            <stop offset="1" stop-color="#FF79DA" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </span>
-        </section>
-        <section>Entrées
-            Fricassée d'escargots
-            Au piment d'Espelette
-            25€
+    <div class="relative">
+        <main>
+            <div class="restaurant">
+                <section class="intro__restaurant">
+                    <h1 class="intro__restaurant--title">La palette du goût</h1>
+                    <span class="like like__restaurant">
+                        <svg class="like__anim" width="24px" height="24px" viewBox="0 0 48 48" id="heart"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m43,17.0766c0-5.6539-4.5835-10.2373-10.2374-10.2373-3.7223,0-6.9708,1.9932-8.7626,4.964-1.7919-2.9708-5.0403-4.964-8.7626-4.964-5.6539,0-10.2373,4.5834-10.2373,10.2373,0,1.2925.2496,2.524.6866,3.6627,3.3851,9.7368,18.3134,20.4215,18.3134,20.4215,0,0,14.9282-10.6847,18.3134-20.4215.437-1.1386.6867-2.3702.6867-3.6627Z"
+                                style="stroke-linecap:round;stroke-linejoin:round" />
+                            <defs>
+                                <linearGradient id="mygradient" x1="11.5" y1="-5.45973" x2="3.93419" y2="27.9927"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#9356DC" />
+                                    <stop offset="1" stop-color="#FF79DA" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </section>
+            </div>
+            <section>
+                <div class="menu">
+                    <div class="entrees">
+                        <h2 class="menu__title">ENTRÉES</h2>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="plat plat-dessert">
+                        <h2 class="menu__title">PLATS</h2>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="dessert plat-dessert">
+                        <h2 class="menu__title">DESSERTS</h2>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                        <article class="menu__cards flex">
+                            <h3 class="menu__cards--title">Fricassée d'escargots</h3>
+                            <div class="menu__cards--content">
+                                <p class="menu__cards--content-txt">Au piment d'Espelette</p>
+                                <div class="menu__cards--content-price">25€</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <div class="cta__restaurant flex">
+                <button class="cta__btn--restaurant btn">Commander</button>
+            </div>
 
-            Foie gras de canard mi-cuit
-            Et ses copeaux de truffe noire
-            35€
-
-            Œuf au plat
-            Assaisonné à la truffe sur lit de caviar
-            20€
-
-
-            Plats
-            Filet de bœuf aux herbes
-            Accompagné de sa ribambelle de légumes
-            40€
-
-            Parmentier de queue de bœuf
-            À la truffe noire sur sa purée de panais
-            35€
-
-            Filet de turbot
-            Aux agrumes
-            44€
-
-            Desserts
-            Paris-Brest
-            Revisité
-            18€
-
-            Macaron au chocolat d'exception
-            Et glace à la vanille de Madagascar
-            22€
-
-            Mousse au chocolat
-            Au piment d'Espelette et à la truffe noire
-            23€ </section>
-        <button class="cta__btn--restaurants btn">Commander</button>
-
-
-    </main>
+        </main>
+    </div>
     <footer>
         <div class="footer flex">
             <div class="footer__logo flex">
@@ -135,6 +181,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

@@ -1,9 +1,15 @@
-.navbar__restaurants {
+.page__restaurant {
+  background-color: $background-color-restaurant;
+}
+.navbar__restaurant {
+  background-color: white;
   flex-direction: row;
+  width: 100%;
   .navbar__icon {
     font-size: 30px;
     align-self: center;
-    padding-left: 17px;
+    position: relative;
+    left: 17px;
   }
 }
 .navbar__img {
@@ -12,16 +18,69 @@
   width: 100%;
   object-position: 0% 0%;
 }
-.intro__restaurants {
-  padding-left: 17px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  background-color: #f6f6f6;
-  .intro__restaurants--title {
-    font-family: Shrikhand;
-    font-size: 28px;
+
+.relative {
+  position: relative;
+  bottom: 30px;
+}
+.restaurant {
+  .intro__restaurant {
+    background-color: $background-color-restaurant;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    .intro__restaurant--title {
+      font-family: Shrikhand;
+      font-size: 28px;
+      padding: 17px 0px 0px 17px;
+    }
   }
 }
-.cta__btn--restaurants {
-  padding: 16px 48px 15px 49px;
+.like__restaurant {
+  position: relative;
+  bottom: 33px;
+  left: 310px;
+}
+.cta__restaurant {
+  justify-content: center;
+  padding-bottom: 10px;
+  .cta__btn--restaurant {
+    padding: 16px 48px 15px 49px;
+  }
+}
+.menu {
+  padding-bottom: 35px;
+  .menu__title {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 3px;
+    margin: 0px 0px 9px 17px;
+    width: 40px;
+    border-bottom: 3px solid $third-color;
+  }
+}
+.menu__cards {
+  flex-direction: column;
+  padding: 15px 15px 0px 15px;
+  margin: 17px 17px 17px 17px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  .menu__cards--title {
+    font-size: 18px;
+    padding-bottom: 5px;
+    font-weight: 500;
+  }
+}
+.menu__cards--content {
+  font-size: 15px;
+  font-weight: 300;
+  .menu__cards--content-price {
+    font-weight: 700;
+    position: relative;
+    bottom: 17px;
+    left: 299px;
+  }
+}
+.plat-dessert {
+  padding-top: 35px;
 }
