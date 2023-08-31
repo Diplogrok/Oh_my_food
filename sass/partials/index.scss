@@ -6,8 +6,7 @@
   max-width: 1440px;
   height: 100vh;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center;
   background-color: white;
   z-index: -1;
   animation: loader $anim-dur;
@@ -62,8 +61,7 @@
   }
 }
 .navbar__search {
-  justify-content: center;
-  align-items: center;
+  @include center;
   background: #eaeaea;
   box-shadow: inset 0px 2px 3px #cccbcb;
   width: 100%;
@@ -93,6 +91,7 @@
 .cta__subtitle {
   color: $text-color-and-footer;
   font-size: 18px;
+  font-weight: 300;
   width: 330px;
   height: 46px;
   padding-bottom: 27px;
@@ -109,9 +108,11 @@
 .intro__cards {
   flex-direction: column;
   .intro__cards--content {
-    justify-content: center;
+    z-index: 0;
+    cursor: pointer;
+    border: none;
+    @include center;
     align-self: center;
-    align-items: center;
     width: 322px;
     padding: 28.59px 0px 28.12px 0px;
     margin: 12.5px;
@@ -123,6 +124,9 @@
     }
   }
 }
+.intro__cards--content:hover {
+  @include intro-btn-hover;
+}
 .intro__ico {
   padding-right: 23px;
   color: #7e7e7e;
@@ -131,7 +135,8 @@
   }
 }
 .intro__cards--number {
-  justify-content: center;
+  z-index: 1;
+  @include center;
   align-self: center;
   color: white;
   font-weight: 500;
@@ -194,6 +199,7 @@
 }
 .restaurants__cards--location {
   padding: 0px 0px 12px 13px;
+  font-weight: 300;
 }
 
 .like__index {

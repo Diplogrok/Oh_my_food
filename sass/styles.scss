@@ -3,8 +3,12 @@
 @import "partials/restaurants.scss";
 
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -14,23 +18,21 @@ h2 {
 a:link,
 a:visited,
 a:active {
-  color: #000000;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
   text-decoration: none;
 }
 .flex {
   display: flex;
 }
-
-.restaurants__cards--location {
-  font-size: 17px;
-}
-
 .footer {
+  z-index: 3;
   padding: 22px 0px 22px 25px;
   flex-direction: column;
   background: $text-color-and-footer;
   color: white;
-  font-weight: 500;
+  font-weight: 400;
   .footer__logo {
     height: 27px;
     width: 137px;
@@ -98,26 +100,27 @@ a:active {
 /* Animation 2 "j'aime" au clic */
 
 .like {
-  position: relative;
-  cursor: pointer;
-  fill: none;
-  stroke: #000000;
-  .like__anim {
-    &:hover path {
+  svg {
+    cursor: pointer;
+    stroke: #000000;
+    fill: none;
+    &:hover > path {
       fill: url(#mygradient);
-      stroke: none;
-      animation: progress-like 1s;
-      transform-origin: bottom;
+      stroke: #000000;
+      animation: progress-like 1000ms forwards;
     }
   }
 }
 
 @keyframes progress-like {
   0% {
-    transform: scale(0);
+    fill-opacity: 0;
+    stroke-opacity: 1;
   }
+
   100% {
-    transform: scale(1);
+    fill-opacity: 1;
+    stroke-opacity: 0;
   }
 }
 

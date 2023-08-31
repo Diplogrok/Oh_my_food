@@ -1,11 +1,29 @@
-/* Variables */
+/* Colors */
 
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $third-color: #99e2d0;
 $text-color-and-footer: #353535;
+$background-color-restaurant: #f6f6f6;
+
+/* Animations */
+
 $num-letters: 8;
+$num-plats: 9;
 $anim-dur: 5000ms;
 $anim-dur-2: 3000ms;
+$anim-dur-3: 1500ms;
 $anim-delay: calc($anim-dur-2 / $num-letters);
-$background-color-restaurant: #f6f6f6;
+$anim-delay-2: calc($anim-dur-3/$num-plats);
+
+/* */
+
+@mixin intro-btn-hover {
+  opacity: 0.8;
+  transition: 250ms;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}
