@@ -351,6 +351,7 @@
   width: 100%;
 }
 .navbar__restaurant .navbar__icon {
+  color: #000;
   font-size: 30px;
   align-self: center;
   position: relative;
@@ -396,7 +397,7 @@
 
 .menu__details {
   background-color: #f6f6f6;
-  padding-bottom: 35px;
+  padding: 0px 15px 35px 15px;
 }
 .menu__details .menu__title {
   font-size: 16px;
@@ -417,30 +418,33 @@
   animation: fadein 1500ms forwards;
 }
 .menu__cards--1 {
-  animation-delay: 166.6666666667ms;
+  animation-delay: 150ms;
 }
 .menu__cards--2 {
-  animation-delay: 333.3333333333ms;
+  animation-delay: 300ms;
 }
 .menu__cards--3 {
-  animation-delay: 500ms;
+  animation-delay: 450ms;
 }
 .menu__cards--4 {
-  animation-delay: 666.6666666667ms;
+  animation-delay: 600ms;
 }
 .menu__cards--5 {
-  animation-delay: 833.3333333333ms;
+  animation-delay: 750ms;
 }
 .menu__cards--6 {
-  animation-delay: 1000ms;
+  animation-delay: 900ms;
 }
 .menu__cards--7 {
-  animation-delay: 1166.6666666667ms;
+  animation-delay: 1050ms;
 }
 .menu__cards--8 {
-  animation-delay: 1333.3333333333ms;
+  animation-delay: 1200ms;
 }
 .menu__cards--9 {
+  animation-delay: 1350ms;
+}
+.menu__cards--10 {
   animation-delay: 1500ms;
 }
 .menu__cards .menu__cards--content-title {
