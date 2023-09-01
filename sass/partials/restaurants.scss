@@ -35,21 +35,18 @@
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     padding-bottom: 40px;
+    padding-top: 20px;
     &--title {
       font-family: Shrikhand;
       font-size: 28px;
-      padding: 17px 20px 0px 17px;
+      padding-left: 17px;
     }
   }
 }
-
-.cta__restaurant {
-  background-color: $background-color-restaurant;
-  justify-content: center;
-  padding-bottom: 40px;
-  .cta__btn--restaurant {
-    padding: 16px 48px 15px 49px;
-  }
+.like__restaurant {
+  @include center;
+  align-self: center;
+  padding-left: 17px;
 }
 
 .menu__details {
@@ -64,10 +61,10 @@
     border-bottom: 3px solid $third-color;
   }
 }
+
 .menu__cards {
   opacity: 0;
   flex-direction: column;
-  padding: 15px;
   margin-bottom: 17px;
   background-color: white;
   border-radius: 15px;
@@ -78,56 +75,63 @@
       animation-delay: $anim-delay-2 * $i;
     }
   }
-  .menu__cards--title {
+  .menu__cards--content-title {
     font-size: 18px;
-    padding-bottom: 5px;
+    padding: 15px 15px 5px 15px;
     font-weight: 500;
-  }
-}
-.menu__overlay {
-  width: auto;
-  position: relative;
-  z-index: 1;
-  text-overflow: ellipsis;
-  .menu__overlay--effect {
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 100%;
-    right: -80%;
-    top: 0;
-    border-radius: 15px;
-    background-color: $third-color;
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: all 0.5s linear;
-  }
-}
-.menu__overlay:hover .menu__overlay--effect {
-  width: 100%;
-  left: 0;
-}
-@keyframes fadein {
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
   }
 }
 .menu__cards--content {
   white-space: nowrap;
-  text-overflow: ellipsis;
   font-size: 15px;
   font-weight: 300;
   .menu__cards--content-txt {
+    padding: 0px 15px 15px 15px;
     justify-content: space-between;
     .menu__cards--content-price {
       font-weight: 700;
     }
+  }
+}
+.menu__overlay {
+  cursor: pointer;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .menu__overlay--effect {
+    @include center;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 74px;
+    position: absolute;
+    border-radius: 0px 15px 15px 0px;
+    background-color: $third-color;
+    .check {
+      color: white;
+      font-size: 24px;
+    }
+  }
+}
+.menu__overlay:hover {
+  .menu__overlay--effect {
+    width: 59px;
+    animation: slide-left 600ms ease forwards;
+  }
+}
+.menu__overlay--content:hover {
+  animation: slide-left-2 600ms ease forwards;
+}
+
+.cta__restaurant {
+  background-color: $background-color-restaurant;
+  justify-content: center;
+  padding-bottom: 40px;
+  .cta__btn--restaurant {
+    padding: 16px 48px 15px 49px;
   }
 }
 

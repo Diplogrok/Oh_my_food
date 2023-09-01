@@ -49,7 +49,7 @@
         <section class="cta flex">
             <h1 class="cta__title">Réservez le menu qui vous convient</h1>
             <p class="cta__subtitle">Découvrez des restaurants d'exception, selectionnées par nos soins.</p>
-            <button class="cta__btn--index btn">Explorer nos restaurants</button>
+            <a href="#restaurants"><button class="cta__btn--index btn">Explorer nos restaurants</button></a>
         </section>
         <section class="intro">
             <h2 class="intro__title flex">Fonctionnement</h2>
@@ -67,19 +67,23 @@
                         class="intro__cards--txt">Degustez au restaurant</a></button>
             </div>
         </section>
-        <section class="restaurants">
+        <section class="restaurants" id="restaurants">
             <h2 class=" restaurants__title">Restaurants</h2>
             <div class="restaurants__content flex">
                 <div class="cards flex">
                     <article class="restaurants__cards flex">
-                        <div class="cards__img"><img
-                                src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="restaurant la palette du goût">
-                            <div class="top-right">Nouveau</div>
-                        </div>
+                        <a href="la-palette-du-gout.html">
+                            <div class="cards__img">
+                                <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                    alt="restaurant la palette du goût">
+                                <div class="top-right">Nouveau</div>
+                            </div>
+                        </a>
                         <div class="cards__content">
-                            <h3 class="restaurants__cards--title">La palette du goût</h3>
-                            <p class="restaurants__cards--location">Ménilmontant</p>
+                            <a href="la-palette-du-gout.html">
+                                <h3 class="restaurants__cards--title">La palette du goût</h3>
+                                <p class="restaurants__cards--location">Ménilmontant</p>
+                            </a>
                             <span class=" like like__index">
                                 <svg width="24px" height="24px" viewBox="0 0 48 48" id="heart"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -222,7 +226,7 @@
                 <p>Mentions légales</p>
             </div>
             <div class="footer__link flex media">
-                <a href="mailto:someone@yoursite.com">Contact</a>
+                <a class="footer__mailto" href="mailto:someone@yoursite.com">Contact</a>
             </div>
         </div>
     </footer>
