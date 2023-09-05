@@ -17,16 +17,16 @@
   z-index: 1;
   position: absolute;
   object-fit: cover;
-  height: 275px;
+  height: 295px;
   width: 100%;
   max-width: 1440px;
-  object-position: 0% 0%;
+  object-position: 50% 50%;
 }
 
 .content {
   z-index: 3;
   position: relative;
-  top: 250px;
+  top: 270px;
 }
 
 .restaurant {
@@ -64,6 +64,9 @@
 }
 
 .menu__cards {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
   opacity: 0;
   flex-direction: column;
   margin-bottom: 17px;
@@ -76,55 +79,54 @@
       animation-delay: $anim-delay-2 * $i;
     }
   }
-  .menu__cards--content-title {
-    font-size: 18px;
-    padding: 15px 15px 5px 15px;
-    font-weight: 500;
-  }
-}
-.menu__cards--content {
-  white-space: nowrap;
-  font-size: 15px;
-  font-weight: 300;
-  .menu__cards--content-txt {
-    padding: 0px 15px 15px 15px;
+  .menu__cards--item {
+    overflow: hidden;
+    padding: 15px 15px 15px 15px;
+    align-items: flex-end;
     justify-content: space-between;
-    .menu__cards--content-price {
+    &:hover .menu__overlay--effect {
+      transform: translateX(-59px);
+    }
+    &:hover .menu__cards--item-price {
+      transform: translateX(-59px);
+      margin-left: 50px;
+    }
+    .menu__cards--item-food {
+      overflow: hidden;
+      &-title {
+        @include ellipsis;
+        padding-bottom: 5px;
+      }
+      &-txt {
+        @include ellipsis;
+        font-weight: 300;
+        font-size: 15px;
+      }
+    }
+    .menu__cards--item-price {
+      padding-left: 20px;
       font-weight: 700;
+      transition: transform 600ms;
     }
   }
 }
-.menu__overlay {
-  cursor: pointer;
-  width: auto;
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  .menu__overlay--effect {
-    @include center;
-    bottom: 0;
-    left: 100%;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 74px;
-    position: absolute;
-    border-radius: 0px 15px 15px 0px;
-    background-color: $third-color;
-    .check {
-      color: white;
-      font-size: 24px;
-    }
+
+.menu__overlay--effect {
+  @include center;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 59px;
+  height: 100%;
+  border-radius: 0px 15px 15px 0px;
+  background-color: $third-color;
+  transition: transform 600ms;
+  .check {
+    color: white;
+    font-size: 24px;
   }
-}
-.menu__overlay:hover {
-  .menu__overlay--effect {
-    width: 59px;
-    animation: slide-left 600ms ease forwards;
-  }
-}
-.menu__overlay--content:hover {
-  animation: slide-left-2 600ms ease forwards;
 }
 
 .cta__restaurant {
@@ -139,7 +141,6 @@
 @media only screen and (min-width: 600px) {
   /* For tablet: */
   .navbar__img {
-    object-position: 0% 55%;
     height: 375px;
   }
 }
